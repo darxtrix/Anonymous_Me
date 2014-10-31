@@ -1,0 +1,160 @@
+body,p,h1,h2,div,input,form,label,*{
+	margin : 0;
+	padding : 0;
+}
+/*To make responsive we have to set the html and body to take 100% else we
+have to set the height in pixels and setting height in pixels is not responsive at all*/
+a {
+	text-decoration: none;
+}
+
+html {
+	height : 100%;
+}
+
+body {
+
+	font-family: Ubuntu,Helvetica,Tahoma,sans-serif;
+	height : 100%;
+
+	/*Bacground Gradient*/
+
+    /* Safari 4-5, Chrome 1-9 */
+    /* Can't specify a percentage size? Laaaaaame. */
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2C2B51));
+  
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(circle, #1a82f7, #2C2B51);
+  
+    /* Firefox 3.6+ */
+    background: -moz-radial-gradient(circle, #1a82f7, #2C2B51);
+  
+    /* IE 10 */
+    background: -ms-radial-gradient(circle, #1a82f7, #2C2B51);
+  
+    /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+}
+
+header {
+	overflow: hidden; /*for avoiding top margin collapsing, applying margins on child will not collapse with the parent */
+	height : 30%;
+}
+
+.headerContent {
+	width : 70%;
+	margin : 0 auto;
+	margin-top: 2%;
+	height : 90%;
+}
+
+.headerContent, .headerContent a {
+	color : white;
+}
+
+h1,h2 
+{
+	padding : 1%;
+}
+#logo {
+	display: inline-block;
+	height: 80%;
+	width : 20%;
+	float: left;
+	padding-right : 2%;
+}
+
+.container {
+	height : 50%;
+	overflow: hidden; /*for setting the margin of the child*/
+	width : 80%;
+	margin-left : 15%;
+	margin-top : 3%;
+}
+
+.formContainer {
+	height : auto;
+	margin-top : 3%;
+	width : 100%;
+}
+
+.outputContainer
+{
+	margin-top: 3.5%;
+}
+
+/*For responsive design give height and width to each element so that they get scaled*/
+
+.formContainer input[type="text"] , #output {
+	width: 60%;
+	text-indent: 8px;
+	border: 2px solid rgb(58, 71, 68);
+	border-radius: 5px;
+	font-size: 2em;
+	font-family: Tahoma,sans-serif;
+	color: white;
+	padding : 1%;
+	background-color: rgba(102, 102, 102, 0.72);
+}
+
+#output {
+	width: 70%;
+}
+
+.button {
+	display : inline-block;
+	font-size: 190%;
+	margin-left: 2%;
+	color: white;
+	letter-spacing: 1px;
+	padding : 0.5%;
+	background-color : #1F9241 ;
+	border: #1F9241 solid 3px;
+	border-radius : 7%;
+	font-family: "Times New Roman",sans-serif;
+}
+
+.button:hover 
+{
+	cursor: pointer;
+}
+
+#outputLabel
+{
+	font-size: 150%;
+	margin: 1%;
+	color: white;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+footer
+{
+	color : white;
+	width : 50%;
+	margin: 0 auto;
+	font-family: Georgia,"Rockwell Extra Bold";
+	font-style : oblique;
+	font-size: 120%;
+	
+}
+
+footer a
+{
+	color : #0E0205;
+	font-style: italic;
+}
+
+footer a:hover
+{
+	text-decoration: underline;
+}
+
+
+#error
+{
+	font-size : 120%;
+	color : red;
+	padding-top: 1%;
+}
+

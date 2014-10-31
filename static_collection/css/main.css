@@ -1,0 +1,89 @@
+body,p,h1,h2,div,input,form,label,*{
+	margin : 0px;
+	padding : 0px;
+}
+
+body
+{
+	font-family: sans-serif;
+}
+
+#header 
+{
+	height : 20%;
+	background-color : #884EB6;
+}
+
+#headContent
+{
+	height : 70%;
+	width : auto;
+	margin-left: 35%;
+	color : white;
+	padding-top: 3%;
+
+}
+
+#headContent h1
+{
+	font-size: 200%;
+}
+
+#headContent h2
+{
+	font-size: 120%;
+}
+
+#bodyWrap
+{
+	height: 40%;
+	width : 80%;
+	margin : auto;
+	margin-top: 3%;
+	padding : 5% 5% 0 5%;
+}
+
+input[type="text"]
+{
+	height: 25%;
+	width: 60%;
+	text-indent: 8px;
+	margin: 2px 10px 2px 0;
+	border: 2px solid rgb(58, 71, 68);
+	border-radius: 5px;
+	font-size: 2em;
+	font-family: monospace;
+	color: #4E4D3A;
+}
+
+#button
+{
+	display : inline-block;
+	font-size: 190%;
+	margin-left: 20px;
+	color: white;
+	letter-spacing: 1px;
+	padding : 5px;
+	background-color : #1D6820 ;
+	border: #1D6820 solid 3px;
+	border-radius : 5px;
+	font-weight: bold;
+}
+
+#foot
+{
+	background: #884EB6;
+	height : 7%;
+	color : white;
+}
+
+#footWrap
+{
+	margin-left: 36%;
+	padding-top : 1em;
+	font-weight: bold;
+	font-family: inherit;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+

@@ -2,3 +2,4 @@
 *local*
 static_files*
 *.pyc
+meta*

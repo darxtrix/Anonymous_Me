@@ -7,4 +7,4 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = ['*']
 
-WSGI_APPLICATION = 'Anonymous_Me.wsgi_production.application'
+WSGI_APPLICATION = 'anonymous_me.wsgi_production.application'

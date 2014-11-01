@@ -5,8 +5,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -26,7 +24,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Anonymous_Me.urls'
+ROOT_URLCONF = 'anonymous_me.urls'
 
 
 
@@ -62,3 +60,10 @@ STATICFILES_FINDERS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'templates'),
     )
+
+import socket
+HOSTADDR = socket.gethostbyname(socket.gethostname())
+if HOSTADDR.startswith('127'):
+    HOSTADDR = '127.0.0.1:8080'
+else :
+    HOSTADDR = socket.gethostname()

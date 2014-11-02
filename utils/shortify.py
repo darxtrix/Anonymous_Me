@@ -22,8 +22,6 @@ DIGITS_OFFSET = 48
 SMALL_OFFSET = 61
 LARGE_OFFSET = 55
 
-hashed_value = [] # this will contain the shortified url
-
 
 def order(remainder):
 	'''
@@ -38,7 +36,7 @@ def order(remainder):
 	
 
 
-def convert(number):
+def convert(number,hashed_value):
 	''' 
 	Recursive function to compute the base62 number of a given integer
 	'''
@@ -47,13 +45,14 @@ def convert(number):
 	rem = number%62
 	number = number/62
 	hashed_value.append(order(rem))
-	convert(number)
+	convert(number,hashed_value)
 
 def hashed_string(number):
 	'''
 		Returns the hash value as  a string
 	'''
-	convert(number)
+	hashed_value = []
+	convert(number,hashed_value)
 	hash_value = ''.join(hashed_value)
 	return hash_value
 

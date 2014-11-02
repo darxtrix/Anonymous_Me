@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     url(r'^$',views.home),
     url(r'^shortify_url$',views.shortify_url),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^.*$',views.redirect), # one more than one characters # .* matches everything
+    url(r'^(.*)$',views.redirect), # one more than one characters # .* matches everything
 )

@@ -4,7 +4,7 @@ from django.template import Template,Context
 from django.core.context_processors import csrf
 
 from url_shortener.models import URLtoHASH
-from url_shortener import shortify
+from utils import shortify
 
 import urlparse
 

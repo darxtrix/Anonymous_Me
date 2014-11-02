@@ -13,10 +13,13 @@ html {
 }
 
 body {
-
 	font-family: Ubuntu,Helvetica,Tahoma,sans-serif;
 	height : 100%;
+}
 
+#content
+{
+	height : 100%;
 	/*Bacground Gradient*/
 
     /* Safari 4-5, Chrome 1-9 */
@@ -33,6 +36,7 @@ body {
     background: -ms-radial-gradient(circle, #1a82f7, #2C2B51);
   
     /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+	display: none;
 }
 
 header {

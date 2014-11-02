@@ -2,7 +2,6 @@ from base import *
 import os
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-DATABASE_URL = 
 
 DEBUG = False
 TEMPLATE_DEBUG = False

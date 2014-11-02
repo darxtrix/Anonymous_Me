@@ -1,6 +1,6 @@
 *~*
 *local*
 static_files*
-static
+static*
 *.pyc
 meta*

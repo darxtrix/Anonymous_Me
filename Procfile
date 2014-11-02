@@ -1,0 +1,1 @@
+web: gunicorn  --pythonpath=./anonymous_me  anonymous_me.wsgi_production:application 

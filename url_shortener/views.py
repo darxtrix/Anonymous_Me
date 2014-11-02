@@ -21,25 +21,21 @@ def shortify_url(request):
 		context = Context({})
 		url = request.POST.get('url','')
 
-		print "URL",url
 		if not url:
 			context['errors'] = 'No URL was supplied' # checking for the supplied url if js is off
 		else: # the url has been supplied
 			try:
 				check_obj = URLtoHASH.objects.get(url=url) # checking if the url is already shoretened or not
-				print "URL ALREADY EXISTS"
 				hash_val = check_obj.hash_value
 			except: # means the user entered a new url
 				url_obj = URLtoHASH(url=url) # creating a new URL obj
 				url_obj.save() # save to DB
 				url_id = url_obj.id # getting the ID of the stored DB object
-				print 'URL_ID',url_id
 				hash_val = hashed_string(url_id)
 				url_obj.hash_value = hash_val# saving the hashed value to the DB
 				url_obj.save() # saving the changes to the DB
 
 
-			print 'HASH_VALUE',hash_val
 			shortened_url = urlparse.urlunparse(('http',HOSTNAME,hash_val,'','',''))
 			context["success"] = shortened_url
 			print shortened_url

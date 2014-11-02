@@ -14,7 +14,7 @@ b -> 38
 
 A bijective mapping is used for this purpose 
 '''
-# TOKENS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+TOKENS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 BASE = 62 # 26*2 + 10 = 62 , 26 small english alphabets , 26 capital english alphabets and 10 digits
 
@@ -56,6 +56,15 @@ def hashed_string(number):
 	convert(number)
 	hash_value = ''.join(hashed_value)
 	return hash_value
+
+def hstring_to_id(hstring):
+	'''
+		Returns the id by taking a hash value
+	'''
+	id = 0
+	for ctr in range(len(hstring)):
+		id += TOKENS.index(hstring[ctr])*(62**ctr)
+	return id
 
 if __name__ == '__main__':
 	n = raw_input("Enter an integer to be converted to base62 notation : ")  # fix leading 0 that makes the input qualify as an octal number

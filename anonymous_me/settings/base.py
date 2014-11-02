@@ -61,9 +61,16 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'templates'),
     )
 
+
 import socket
+
 HOSTADDR = socket.gethostbyname(socket.gethostname())
+
 if HOSTADDR.startswith('127'):
     HOSTADDR = '127.0.0.1:8080'
 else :
     HOSTADDR = socket.gethostname()
+
+# Putting utils on path
+import sys
+sys.path.append(os.path.join(BASE_DIR,'utils'))

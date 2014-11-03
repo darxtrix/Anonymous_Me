@@ -10,7 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^$',views.home),
     url(r'^shortify_url$',views.shortify_url),
-    url(r'^imankush$', include(admin.site.urls)),
+    url(r'^imankush', include(admin.site.urls)), # do not use $ as it will make the url end
     url(r'^google4962e1a518060429\.html$', lambda r: HttpResponse("google-site-verification: google4962e1a518060429.html", mimetype="text/plain")), #added google site ownership verification file
 	url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt')), #added ronots.txt file
 	url(r'^sitemap.xml$',TemplateView.as_view(template_name='sitemap.xml')), #serving sitemap

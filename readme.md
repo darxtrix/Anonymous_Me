@@ -1,7 +1,7 @@
 Anonymous_Me
 ------------
 
-A **Url Shortener** that will make you anonymous on the web. Generates anonymous shortened urls from a supplied url. And it's here : http://anme.herokuapp.com
+A **Url Shortener** that will make you anonymous on the web. Generates anonymous shortened urls from a supplied url. And it's **here**: http://anme.herokuapp.com
 
 Features
 --------
@@ -17,7 +17,7 @@ Built Using
 
 **Usage**
 
-Locally, create a database and configure 'settings.local'and then :
+Locally, create a database and configure `settings.local` and then :
 
 
 

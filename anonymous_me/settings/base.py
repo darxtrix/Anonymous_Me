@@ -70,7 +70,7 @@ HOSTNAME = socket.gethostbyname(socket.gethostname())
 if HOSTNAME.startswith('127'): # for my local work
     HOSTNAME = '127.0.0.1:8080'
 else :
-    HOSTNAME = socket.gethostname()
+    HOSTNAME = 'anme.herokuapp.com' # production url
 
 
 
